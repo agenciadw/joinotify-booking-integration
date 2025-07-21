@@ -19,6 +19,20 @@
  * @package JoinotifyBookingIntegration
  */
 
+// Adiciona links extras abaixo do nome do plugin
+add_filter( 'plugin_row_meta', 'joinotify_booking_integration_row_meta', 10, 2 );
+function joinotify_booking_integration_row_meta( $links, $file ) {
+    if ( plugin_basename( __FILE__ ) === $file ) {
+        $custom_links = array(
+            '<a href="https://github.com/agenciadw/joinotify-booking-integration/blob/main/plugin_manual.md" target="_blank" rel="noopener noreferrer">Documentação</a>',
+            '<a href="https://github.com/agenciadw/joinotify-booking-integration/blob/main/installation_guide.md" target="_blank" rel="noopener noreferrer">Guia de Instalação</a>',
+        );
+        // Coloca os links personalizados após os padrões
+        return array_merge( $links, $custom_links );
+    }
+    return $links;
+}
+
 // Evita acesso direto
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
