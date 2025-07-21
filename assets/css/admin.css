@@ -1,0 +1,199 @@
+/* Estilos para o painel administrativo do Joinotify Booking Integration */
+
+.jbi-help-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.jbi-help-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.jbi-help-card h4 {
+    margin-top: 0;
+    color: #0073aa;
+}
+
+.jbi-test-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.jbi-logs-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.jbi-placeholders-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.jbi-placeholders-section table {
+    margin-top: 15px;
+}
+
+.jbi-placeholders-section code {
+    background: #f1f1f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: Consolas, Monaco, monospace;
+}
+
+.jbi-hpos-status {
+    margin-top: 20px;
+}
+
+.jbi-hpos-status table {
+    margin-top: 10px;
+}
+
+.jbi-hpos-status .description {
+    margin-top: 15px;
+    padding: 10px;
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+}
+
+.status-sent {
+    color: #46b450;
+    font-weight: bold;
+}
+
+.status-error {
+    color: #dc3232;
+    font-weight: bold;
+}
+
+.status-pending {
+    color: #ffb900;
+    font-weight: bold;
+}
+
+#test_result {
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+#test_result.success {
+    background: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+}
+
+#test_result.error {
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
+
+.jbi-logs-section details {
+    margin-top: 5px;
+}
+
+.jbi-logs-section summary {
+    cursor: pointer;
+    color: #0073aa;
+    text-decoration: underline;
+}
+
+.jbi-logs-section pre {
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    max-height: 200px;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.nav-tab-wrapper {
+    margin-bottom: 20px;
+}
+
+.tab-content {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+
+.form-table th {
+    width: 200px;
+}
+
+.form-table td input[type="text"],
+.form-table td input[type="number"] {
+    width: 300px;
+}
+
+.form-table td .description {
+    margin-top: 5px;
+    font-style: italic;
+    color: #666;
+}
+
+.button.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.button.loading:after {
+    content: "...";
+    animation: dots 1.5s steps(5, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        color: rgba(0,0,0,0);
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    40% {
+        color: black;
+        text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    60% {
+        text-shadow:
+            .25em 0 0 black,
+            .5em 0 0 rgba(0,0,0,0);
+    }
+    80%, 100% {
+        text-shadow:
+            .25em 0 0 black,
+            .5em 0 0 black;
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .jbi-help-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-table td input[type="text"],
+    .form-table td input[type="number"] {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
