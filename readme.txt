@@ -4,7 +4,7 @@ Tags: woocommerce, booking, whatsapp, notifications, joinotify, hpos
 Requires at least: 5.0
 Tested up to: 6.4
 Requires PHP: 7.4
-Stable tag: 1.0.8
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -91,10 +91,13 @@ Sim! O plugin inclui uma funcionalidade de teste que permite enviar notificaçõ
 4. Exemplo de mensagem WhatsApp gerada
 5. Placeholders no construtor do Joinotify
 
+= 1.1.0 =
+* Alterado o formato de exibição do ID da reserva para 'Reserva nº: #NÚMERO'.
+
+= 1.0.9 =
+* Adicionado o ID da reserva como primeiro item nos detalhes da reserva.
+
 = 1.0.8 =
-* Corrigido erro fatal causado por declaração duplicada de função.
-* Adicionado placeholder `{{ booking_id }}` para exibir o número da reserva.
-* Atualizado o template de mensagem padrão para usar `{{ booking_id }}`.
 
 = 1.0.7 =
 * Nova funcionalidade: Template de mensagem personalizável nas configurações.

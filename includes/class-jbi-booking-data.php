@@ -332,6 +332,7 @@ class JBI_Booking_Data {
         
         // Monta o bloco de detalhes
         $detail_parts = array();
+        $detail_parts[] = "Reserva nº: #" . $booking->get_id();
         $detail_parts[] = "📅 Reserva: " . $product_name;
         
         if ( $resource_info ) {

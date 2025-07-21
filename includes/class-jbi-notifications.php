@@ -154,6 +154,7 @@ class JBI_Notifications {
         // Dados para substituição
         $customer_name = $order->get_billing_first_name();
         $order_number = $order->get_order_number();
+        $booking_id = JBI_Booking_Data::get_single_booking_id( $order );
         $booking_details = JBI_Booking_Data::get_booking_details( $order );
         $product_addons = JBI_Addon_Data::get_product_addons( $order );
         
@@ -167,6 +168,7 @@ class JBI_Notifications {
         $placeholders = array(
             '{{ customer_name }}' => $customer_name,
             '{{ order_number }}' => $order_number,
+            '{{ booking_id }}' => $booking_id,
             '{{ booking_details }}' => $booking_details ? $booking_details : __( 'Nenhum detalhe de reserva disponível', 'joinotify-booking-integration' ),
             '{{ product_addons }}' => $product_addons ? $product_addons : '',
             '{{ order_total }}' => $total_formatted,

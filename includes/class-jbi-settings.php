@@ -54,7 +54,7 @@ class JBI_Settings {
      * Obtém o template padrão de mensagem
      */
     public static function get_default_message_template() {
-        return "🎉 Olá {{ customer_name }}!\n\n✅ Sua reserva foi confirmada com sucesso!\n\n📋 **Detalhes da Reserva #{{ booking_id }}**\n\n{{ booking_details }}\n\n🎁 **Extras selecionados:**\n{{ product_addons }}\n\n💰 **Valor total:** {{ order_total }}\n\n📞 Em caso de dúvidas, entre em contato conosco.\n\nObrigado por escolher {{ site_name }}! 🙏";
+        return "🎉 Olá {{ customer_name }}!\n\n✅ Sua reserva foi confirmada com sucesso!\n📋 **Detalhes da Reserva #{{ booking_id }}**\n\n{{ booking_details }}\n\n🎁 **Extras selecionados:**\n{{ product_addons }}\n\n💰 **Valor total:** {{ order_total }}\n\n📞 Em caso de dúvidas, entre em contato conosco.\n\nObrigado por escolher {{ site_name }}! 🙏";
     }
 
     /**

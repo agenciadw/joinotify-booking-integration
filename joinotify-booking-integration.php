@@ -3,7 +3,7 @@
  * Plugin Name: Joinotify Booking Integration
  * Plugin URI: https://github.com/agenciadw/joinotify-booking-integration
  * Description: Integração dinâmica entre WooCommerce Booking, Product Add-ons e Joinotify para notificações WhatsApp completas e automáticas.
- * Version: 1.0.8
+ * Version: 1.1.0
  * Author: David William da Costa
  * Author URI: https://github.com/agenciadw
  * License: GPL v2 or later
@@ -33,7 +33,7 @@ add_action( 'before_woocommerce_init', function() {
 
 // Define constantes do plugin
 if ( ! defined( 'JBI_VERSION' ) ) {
-    define( 'JBI_VERSION', '1.0.8' );
+    define( 'JBI_VERSION', '1.1.0' );
 }
 if ( ! defined( 'JBI_PLUGIN_FILE' ) ) {
     define( 'JBI_PLUGIN_FILE', __FILE__ );
@@ -296,6 +296,10 @@ JBI();
 
 /*
  * Changelog
+ * 1.1.0 - 2025-07-21
+ *   - Alterado o formato de exibição do ID da reserva para 'Reserva nº: #NÚMERO'.
+ * 1.0.9 - 2025-07-21
+ *   - Adicionado o ID da reserva como primeiro item nos detalhes da reserva.
  * 1.0.8 - 2025-07-21
  *   - Corrigido erro fatal causado por declaração duplicada de função.
  *   - Adicionado placeholder `{{ booking_id }}` para exibir o número da reserva.
