@@ -319,5 +319,3 @@ JBI();
  *   - Adicionado placeholder `{{ booking_id }}` para exibir o número da reserva.
  *   - Atualizado o template de mensagem padrão para usar `{{ booking_id }}`.
  */
-
-
